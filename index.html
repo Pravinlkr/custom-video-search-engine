@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Search Engine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- header section -->
+    <div class="header">
+      <img src="images/logo.png" alt="search engine logo" id="engine-logo">
+      <h1 class="header-title">Simple Video Search Engine</h1>
+    </div>
+    <!-- search section -->
+    <div id="search-box-container" class="search-box-container"></div>
+  </div>
+  <!-- overlay section -->
+  <div class="result-overlay" id="result-overlay">
+    <div class="result-content-container">
+      <div class="result-overlay--video">
+        <iframe
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          id="videoIframe"
+        ></iframe>
+        <div class="details">
+          <h3 class="details-title" id="details-title"></h3>
+          <div class="details-info">
+            <p id="details-url"></p>
+            <p>.</p>
+            <p id="details-views-count"></p>
+          </div>
+        </div>
+      </div>
+      <div class="result-overlay--action">
+        <button class="btn btn-primary" id="visit-link">Visit</button>
+        <button class="btn btn-secondary" id="close-overlay">Close</button>
+      </div>
+    </div>
+  </div>
+  <script async src="https://cse.google.com/cse.js?cx=16b38999797184512"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

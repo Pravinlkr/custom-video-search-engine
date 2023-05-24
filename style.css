@@ -1,0 +1,261 @@
+:root {
+  --primary-color: #2B2F39;
+  --black : black;
+  --blue : #4d90fe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.0025em;
+}
+
+body {
+  background-color: var(--black);
+}
+
+.btn {
+  padding: 0.75rem 1.625rem;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+}
+
+.btn-secondary {
+  background-color: #5D6067;
+}
+
+.container {
+  width: 22.5rem;
+  min-height: 100vh;
+  height: auto;
+  overflow-y: hidden;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* header section  */
+.header {
+  padding: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+h1.header-title {
+  font-size: 1.125rem;
+  color: var(--primary-color);
+}
+
+/* search section */
+.search-box-container {
+  padding: 0.2rem 0.625rem;
+}
+
+.thumbnail-image{
+  width: 8rem;
+  height: 5rem;
+}
+
+.gsc-adBlock,
+.gs-result,
+.gsc-above-wrapper-area,
+.gcsc-branding,
+.gsib_b {
+  display: none !important;
+}
+
+.gsc-control-cse,
+.gsc-control-cse-en {
+  padding: 0.8rem 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gsc-input {
+  background-image: none !important;
+  padding-right: 0 !important;
+}
+
+.gcsc-more-maybe-branding-box,
+.gsc-input-box {
+  border: none !important;
+}
+
+.gsc-search-button, .gsc-search-button-v2 {
+  background-color: white !important;
+  border: none !important;
+}
+
+.gsc-search-button-v2 svg {
+  fill: var(--blue) !important;
+}
+
+/* result section  */
+.result-container {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+}
+
+.video-container {
+  width: 8.25rem;
+  height: 4.625rem;
+  position: relative;
+}
+
+.video-container img {
+  width: 8.25rem;
+  height: 4.625rem;
+  border-radius: 0.375rem;
+}
+
+.video-container .duration{
+  background-color: var(--black);
+  color: white;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+.detail-container {
+  position: relative;
+  width: 100%;
+}
+
+.detail-container .video-title {
+  width: 10.5rem;
+  height: 2rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.result-bottom-section {
+  position: absolute;
+  bottom: 0.225rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+}
+
+.result-bottom-section a,
+.result-bottom-section .views-text {
+  color: #5D6067;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+/* display video overlay */
+.result-overlay {
+  opacity: 0;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.result-content-container {
+  width: 22.5rem;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.show-overlay {
+  opacity: 1;
+  z-index: 9999;
+}
+
+.show-animated {
+  animation: overlayTransitionShow .5s ease-out  .05s backwards;
+}
+
+.hide-animated {
+  animation: overlayTransitionHide .5s ease-out  .05s backwards;
+}
+
+.result-overlay--video {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+.result-overlay--video iframe {
+  width: 100%;
+  height: 12.687rem;
+}
+.result-overlay--video .details {
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.0025rem;
+}
+
+.result-overlay--video .details h3 {
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.result-overlay--video .details .details-info {
+  display: flex;
+  gap: 1rem;
+  color: #9499A6;
+  font-size: 0.825rem;
+}
+
+.result-overlay--action {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+ /* overlay animation */
+@keyframes overlayTransitionShow {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 9999;
+  }
+}
+@keyframes overlayTransitionHide {
+  0% {
+    opacity: 1;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
