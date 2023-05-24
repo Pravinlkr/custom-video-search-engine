@@ -1,7 +1,8 @@
 :root {
   --primary-color: #2B2F39;
-  --black : black;
+  --black : #000000;
   --blue : #4d90fe;
+  --white : #ffffff;
 }
 
 * {
@@ -25,7 +26,7 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -42,7 +43,7 @@ body {
   min-height: 100vh;
   height: auto;
   overflow-y: hidden;
-  background-color: white;
+  background-color: var(--white);
   margin: 0 auto;
   position: relative;
 }
@@ -96,7 +97,7 @@ h1.header-title {
 }
 
 .gsc-search-button, .gsc-search-button-v2 {
-  background-color: white !important;
+  background-color: var(--white) !important;
   border: none !important;
 }
 
@@ -127,7 +128,7 @@ h1.header-title {
 
 .video-container .duration{
   background-color: var(--black);
-  color: white;
+  color: var(--white);
   position: absolute;
   right: 0.5rem;
   bottom: 0.5rem;
@@ -214,7 +215,7 @@ h1.header-title {
 }
 
 .result-overlay--video .details h3 {
-  color: white;
+  color: var(--white);
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 600;
